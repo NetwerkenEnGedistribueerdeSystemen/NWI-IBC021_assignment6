@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+
+\setlength\parskip{1em}
+\setlength\parindent{0em}
+
+\title{Assignment 6}
+
+\author{Hendrik Werner s4549775}
+
+\begin{document}
+\maketitle
+
+\section{} %1
+\begin{enumerate}[a]
+	\item %a
+	\item %b
+\end{enumerate}
+
+\section{} %2
+\begin{enumerate}[a]
+	\item %a
+	\begin{tikzpicture}[
+		node distance=4em,
+		n/.style={draw, ellipse, minimum width=5em},
+		a/.style={->, thick},
+	]
+		\node (Start) {};
+		\node[n, below=1em of Start] (A) {closed};
+		\node[n, below=of A] (B) {};
+		\node[n, below=of B] (C) {established};
+		\node[n, below left=of C] (D) {close\_wait};
+		\node[n, below right=of C] (E) {fin\_wait2};
+		\node[n, below=of D] (F) {};
+		\node[n, below=of E] (G) {};
+
+		\draw[a, very thick] (Start) edge (A);
+		\draw[a] (A) edge node[fill=white] {connect / S(50,0)} (B);
+		\draw[a] (B) edge node[fill=white] {\_(80, \_) / \_(\_, \_)} (C);
+		\draw[a] (C) edge node[fill=white] {FA(\_, 51) / \_(\_, \_)} (D);
+		\draw[a] (C) edge node[fill=white] {close / FA(\_, 81)} (E);
+		\draw[a] (D) edge node[fill=white] {close / FA(51, \_)} (F);
+		\draw[a] (E) edge node[fill=white] {FA(81, \_) / A(\_, 82)} (G);
+		\draw[a] (F) edge[bend left, out=112, in=112, looseness=1.1] node[fill=white] {A(82, 52) / no\_output} (A);
+	\end{tikzpicture}
+	\item %b
+	\item %c
+	\item %d
+\end{enumerate}
+
+\section{} %3
+\begin{enumerate}[a]
+	\item %a
+	\item %b
+	\item %c
+	\item %d
+	\item %e
+	\item %f
+	\item %g
+	\item %h
+	\item %i
+\end{enumerate}
+
+\end{document}
