@@ -67,6 +67,7 @@
 	\item %f
 	The $ssthresh$ at 8 should be set to half of what it is, so to 6. If you look at the graph however the $ssthresh$ seems to be set to 9 instead because that is where fast recovery picks up.
 	\item %g
+	The $ssthresh$ is set to half the current $cwnd$ after 13, which is $6$. Because at 15 the $cwnd$ is at 2 and $2^2 = 4 \leq 6$, the $cwnd$ at 16 is 4.
 	\item %h
 	\item %i
 \end{enumerate}
