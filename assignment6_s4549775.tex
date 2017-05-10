@@ -31,12 +31,12 @@
 	]
 		\node (Start) {};
 		\node[n, below=1em of Start] (A) {closed};
-		\node[n, below=of A] (B) {};
+		\node[n, below=of A] (B) {syn\_send};
 		\node[n, below=of B] (C) {established};
 		\node[n, below left=of C] (D) {close\_wait};
 		\node[n, below right=of C] (E) {fin\_wait2};
-		\node[n, below=of D] (F) {};
-		\node[n, below=of E] (G) {};
+		\node[n, below=of D] (F) {last\_ack};
+		\node[n, below=of E] (G) {time\_wait};
 
 		\draw[a, very thick] (Start) edge (A);
 		\draw[a] (A) edge node[fill=white] {connect / S(50,0)} (B);
