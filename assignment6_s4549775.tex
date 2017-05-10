@@ -71,6 +71,16 @@
 	\item %h
 	Both values are set to half the current $cwnd$, which is 1. The $ssthresh$ and $cwnd$ would both be set to 1.
 	\item %i
+	\begin{tabular}{c|c|c}
+		Round & Packets send & Total\\\hline
+		1 & 1 & 1\\
+		2 & 2 & 3\\
+		3 & 4 & 7\\
+		4 & 8 & 15\\
+		5 & 9 & 24\\
+	\end{tabular}
+
+	The 17th segment is send somewhere within the 5th round.
 \end{enumerate}
 
 \end{document}
