@@ -67,6 +67,11 @@
 		\draw[a] (B4) edge (A9);
 		\draw[a] (B5) edge (A10);
 		\draw[a] (B6) edge (A12);
+
+		% timeout markers
+		\node[left=2.5em of A2] (tstart) {};
+		\node[left=2.5em of A11] (tend) {};
+		\draw[|-|] (tstart) edge node[sloped, fill=white] {timeout for packet 2} (tend);
 	\end{tikzpicture}
 
 	\item %b
