@@ -19,6 +19,36 @@
 \section{} %1
 \begin{enumerate}[a]
 	\item %a
+	\textbf{Selective Repeat:}
+
+	\begin{tikzpicture}[
+		node distance=1em,
+		a/.style={->, thick},
+	]
+		\node[rectangle, draw] (A) {Sender A};
+		\node[below=of A] (A0) {/ 0};
+		\node[below=of A0] (A1) {/ 1};
+		\node[below=of A1] (A2) {/ 2};
+		\node[below=of A2] (A3) {/ 3};
+		\node[below=of A3] (A4) {/ 4};
+		\node[below=of A4] (A5) {/ 5};
+
+		\node[rectangle, draw, right=10em of A] (B) {Receiver B};
+		\node[below=2em of B] (B0) {0 / 0};
+		\node[below=of B0] (B1) {1 / 1};
+		\node[below=of B1, minimum width=3em] (B2) {lost};
+		\node[below=of B2] (B3) {3 / 3};
+		\node[below=of B3] (B4) {4 / 4};
+		\node[below=of B4] (B5) {5 / 5};
+
+		\draw[a] (A0) edge (B0);
+		\draw[a] (A1) edge (B1);
+		\draw[a] (A2) edge (B2);
+		\draw[a] (A3) edge (B3);
+		\draw[a] (A4) edge (B4);
+		\draw[a] (A5) edge (B5);
+	\end{tikzpicture}
+
 	\item %b
 \end{enumerate}
 
