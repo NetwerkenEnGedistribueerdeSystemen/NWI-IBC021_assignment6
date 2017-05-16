@@ -89,6 +89,17 @@
 	\textbf{TCP:}
 
 	\includegraphics[width=\linewidth]{diagrams/TCP}
+
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Comparison}}\\\hline
+		Protocol & GBN & SR & TCP\\\hline
+		\hline
+		Packets sent by A & 10 & 7 & 7\\
+		ACKs sent by B & 9 & 6 & 6\\\hline
+	\end{tabular}
+
+	For the sequence numbers of the packets and ACKS refer to the diagrams above.
 	\item %b
 	TCP would deliver all data segments in the shortest time interval because of the fast retransmit that is built into it. After 3 duplicate ACKs the sender will retransmit the packet after the last one it has received an ACK for. This happens regardless of the timeout value.
 
