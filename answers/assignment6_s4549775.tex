@@ -90,6 +90,9 @@
 
 	\includegraphics[width=\linewidth]{diagrams/TCP}
 	\item %b
+	TCP would deliver all data segments in the shortest time interval because of the fast retransmit that is built into it. After 3 duplicate ACKs the sender will retransmit the packet after the last one it has received an ACK for. This happens regardless of the timeout value.
+
+	Neither GBN nor SR have such a mechanic and only retransmit packets after the timeout has run out. This means with a long timeout it will take much time before the missing packet is retransmitted.
 \end{enumerate}
 
 \section{} %2
