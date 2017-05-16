@@ -41,10 +41,10 @@
 
 		\draw[a, very thick] (Start) edge (A);
 		\draw[a] (A) edge node[fill=white] {connect / S(50,0)} (B);
-		\draw[a] (B) edge node[fill=white] {\_(80, \_) / \_(\_, \_)} (C);
-		\draw[a] (C) edge node[fill=white] {FA(\_, 51) / \_(\_, \_)} (D);
+		\draw[a] (B) edge node[fill=white] {SA(80, 51) / A(51, 81)} (C);
+		\draw[a] (C) edge node[fill=white] {FA(81, 51) / A(51, 82)} (D);
 		\draw[a] (C) edge node[fill=white] {close / FA(\_, 81)} (E);
-		\draw[a] (D) edge node[fill=white] {close / FA(51, \_)} (F);
+		\draw[a] (D) edge node[fill=white] {close / FA(51, 82)} (F);
 		\draw[a] (E) edge node[fill=white] {FA(81, \_) / A(\_, 82)} (G);
 		\draw[a] (F) edge[bend left, out=112, in=112, looseness=1.1] node[fill=white] {A(82, 52) / no\_output} (A);
 	\end{tikzpicture}
