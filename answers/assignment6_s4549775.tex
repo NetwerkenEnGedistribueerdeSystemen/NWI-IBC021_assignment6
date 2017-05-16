@@ -32,6 +32,13 @@
 		\node[below=of A2] (A3) {/ 3};
 		\node[below=of A3] (A4) {/ 4};
 		\node[below=of A4] (A5) {/ 5};
+		\node[below=of A5] (A6) {0 /};
+		\node[below=of A6] (A7) {1 /};
+		\node[below=2em of A7] (A8) {3 /};
+		\node[below=of A8] (A9) {4 /};
+		\node[below=of A9] (A10) {5 /};
+		\node[below=of A10] (A11) {/ 2};
+		\node[below=2em of A11] (A12) {/ 2};
 
 		\node[rectangle, draw, right=10em of A] (B) {Receiver B};
 		\node[below=2em of B] (B0) {0 / 0};
@@ -40,6 +47,7 @@
 		\node[below=of B2] (B3) {3 / 3};
 		\node[below=of B3] (B4) {4 / 4};
 		\node[below=of B4] (B5) {5 / 5};
+		\node[below=13em of B5] (B6) {2 / 2};
 
 		\draw[a] (A0) edge (B0);
 		\draw[a] (A1) edge (B1);
@@ -47,6 +55,14 @@
 		\draw[a] (A3) edge (B3);
 		\draw[a] (A4) edge (B4);
 		\draw[a] (A5) edge (B5);
+		\draw[a] (A11) edge (B6);
+
+		\draw[a] (B0) edge (A6);
+		\draw[a] (B1) edge (A7);
+		\draw[a] (B3) edge (A8);
+		\draw[a] (B4) edge (A9);
+		\draw[a] (B5) edge (A10);
+		\draw[a] (B6) edge (A12);
 	\end{tikzpicture}
 
 	\item %b
